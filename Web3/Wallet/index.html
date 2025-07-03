@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mnemonic Generator</title>
+</head>
+<body>
+  <h2>Generate BIP39 Mnemonic</h2>
+  <button onclick="generate()">Generate</button>
+  <p id="output"></p>
+
+  <!-- Correct CDN for global bip39 -->
+  <script src="https://cdn.jsdelivr.net/npm/bip39@3.0.4/dist/bip39.browser.min.js"></script>
+  <script>
+    function generate() {
+      const mnemonic = bip39.generateMnemonic();
+      document.getElementById("output").innerText = mnemonic;
+    }
+  </script>
+</body>
+</html>

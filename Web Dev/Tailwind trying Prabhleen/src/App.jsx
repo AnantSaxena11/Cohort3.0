@@ -1,10 +1,14 @@
-import React from 'react'
-import BasicSideBar from './components/BasicSideBar'
+import { useState } from 'react';
 
 function App() {
+  const [darkmode,setDarkmode] = useState(false);
+  function onchange()
+  {
+    setDarkmode(darkmode => !darkmode)
+  }
   return (
-    <div>
-      <BasicSideBar/>
+    <div className={`h-screen ${darkmode ? "bg-blue-800" : "bg-white"}`}>
+      <button onClick={onchange}>Mode Change</button>
     </div>
   )
 }

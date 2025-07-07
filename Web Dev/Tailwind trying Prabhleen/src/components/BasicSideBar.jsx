@@ -7,7 +7,7 @@ function BasicSideBar() {
         SideBar
       </div>
       <div className="bg-green-800 w-full h-screen">
-        COntent
+        Content
       </div>
     </div>
   )

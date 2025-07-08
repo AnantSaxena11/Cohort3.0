@@ -1,13 +1,10 @@
-import { useState } from 'react';
-
 function App() {
-  const [darkmode,setDarkmode] = useState(false);
   function onchange()
   {
-    setDarkmode(darkmode => !darkmode)
+    document.querySelector("html").classList.toggle("dark",document.querySelector("html").classList[0] == "dark" ? false : true)
   }
   return (
-    <div className={`h-screen ${darkmode ? "bg-blue-800" : "bg-white"}`}>
+    <div className= "h-screen bg-white dark:bg-blue-800">
       <button onClick={onchange}>Mode Change</button>
     </div>
   )

@@ -1,14 +1,9 @@
 "use strict";
-let user = {
+let Anant = {
     name: "Anant",
     age: 21,
-    address: {
-        city: "GNoida",
-        country: "India",
-        pincode: 132456
+    greet: () => {
+        return "Hello";
     }
 };
-const isLegal = (user) => {
-    return (user.age >= 18);
-};
-console.log(isLegal(user));
+console.log(Anant.greet());
